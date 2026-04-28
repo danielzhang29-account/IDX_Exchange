@@ -1,20 +1,7 @@
-"""
-Mortgage Rate Enrichment
-
-This script:
-1. Loads the combined sold and listings datasets.
-2. Fetches the FRED MORTGAGE30US 30-year fixed mortgage rate series.
-3. Resamples the weekly mortgage rate data to monthly averages.
-4. Creates year-month keys on the MLS datasets.
-5. Merges monthly mortgage rates onto both datasets.
-6. Validates that no mortgage rate values are missing after the merge.
-7. Saves the enriched datasets as new CSV files.
-"""
-
 import pandas as pd
 
-SOLD_INPUT_FILE = "combined_sold_residential.csv"
-LISTINGS_INPUT_FILE = "combined_listings_residential.csv"
+SOLD_INPUT_FILE = "filtered_sold.csv"
+LISTINGS_INPUT_FILE = "filtered_listings.csv"
 
 SOLD_OUTPUT_FILE = "combined_sold_residential_with_mortgage_rates.csv"
 LISTINGS_OUTPUT_FILE = "combined_listings_residential_with_mortgage_rates.csv"
